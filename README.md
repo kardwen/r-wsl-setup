@@ -43,10 +43,16 @@ gpg --armor --export '95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7' | \
 
 ### Installing R
 
-Finally [install R](https://cran.r-project.org/bin/linux/debian/#installation) with the following command. The second package is an optional dependency needed for the development of R packages.
+Since you have just added a new repository, run the following commands to retrieve information about newly available packages and install any applicable updates:
 
 ```bash
-sudo apt update && sudo apt install r-base r-base-dev
+sudo apt update && sudo apt upgrade
+```
+
+Finally, [install R](https://cran.r-project.org/bin/linux/debian/#installation) with the following command. The second package ``r-base-dev`` is an optional dependency needed for the development of R packages and can be omitted.
+
+```bash
+sudo apt install r-base r-base-dev
 ```
 
 ## RStudio Desktop
