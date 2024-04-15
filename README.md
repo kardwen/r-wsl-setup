@@ -1,6 +1,6 @@
 # Automatic updates for R on Windows with WSL
 
-The usual way of updating R on Windows is to trigger updates manually with the R package ``ìnstallr``. However, a more convenient way to update R is to install R inside a WSL (Windows Subsystem for Linux) distribution like Debian and by leveraging the Windows Update process to update both the WSL distribution and your R installation automatically.
+The usual way of updating R on Windows is to trigger updates manually with the R package ``ìnstallr``. However, a more convenient way to update R is to install R inside the Windows Subsystem for Linux (WSL) and leveraging the Windows Update process to update both the WSL distribution and your R installation automatically.
 
 ## Windows Subsystem for Linux
 
@@ -18,7 +18,7 @@ After restarting you can log in to your WSL distribution by simply typing ``wsl 
 
 While R is available in the Debian package repositories, the most reliable way to ensure to always have the latest R version installed is to configure the Debian repository maintained by the R project.
 
-### Configuring the Debian repository
+### Configuring the R project Debian repository
 
 Create a new entry for the additional repository:
 
@@ -57,7 +57,7 @@ sudo apt install r-base r-base-dev
 
 ## RStudio Desktop
 
-Since WSL2 you can [run Linux GUI apps](https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps) in WSL. RStudio Desktop is the most widely used graphical IDE for working with R, it can be installed manually with the provided binary packages on [posit.co](https://posit.co/download/rstudio-desktop/). Unfortunately RStudio is not available in the official Debian repositories.
+Since WSL2 you can [run Linux GUI apps](https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps) in WSL. RStudio Desktop is the most widely used graphical IDE for working with R and can be installed manually with the provided binary packages on [posit.co](https://posit.co/download/rstudio-desktop/). Unfortunately RStudio is not available in the official Debian repositories.
 
 ```bash
 wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.12.1-402-amd64.deb -P /tmp
@@ -75,6 +75,6 @@ Once installed you can also find an entry for RStudio in the Windows Start menu.
 
 ## Notes
 
-* You can open the Windows explorer at the current location in WSL with ``explorer.exe .``
+* You can open the Windows File Explorer at the current location in WSL with ``explorer.exe .``
 * Note that transfering large files between WSL2 and Windows is rather slow
 * Instructions for installing RStudio Server in WSL can be found on [posit.co](https://support.posit.co/hc/en-us/articles/360049776974-Using-RStudio-Server-in-Windows-WSL2)
