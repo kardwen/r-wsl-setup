@@ -78,3 +78,4 @@ Once installed you can also find an entry for RStudio in the Windows Start menu.
 * You can open the Windows File Explorer at the current location in WSL with ``explorer.exe .``
 * Note that transfering large files between WSL2 and Windows is rather slow
 * Instructions for installing RStudio Server in WSL can be found on [posit.co](https://support.posit.co/hc/en-us/articles/360049776974-Using-RStudio-Server-in-Windows-WSL2)
+* Some R packages like tidyverse require additional system dependencies, look at the the output when running ``ìnstall.packages`` and install them as needed
